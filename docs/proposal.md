@@ -22,9 +22,12 @@ The primary key for the user table will be a foreign key in the lucky number tab
 
 Initial Designs
 -
-Home Page
+
+Home Page  
 ![homepage Layout](/docs/pagelayout.png)
-Lucky Numbers Page
+
+Lucky Numbers Page  
 ![lucky numbers page layout](/docs/luckyNumbersPage.png)
-Sitemap
+
+Sitemap  
 ![sitemap](/docs/sitemap.png)
