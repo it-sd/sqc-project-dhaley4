@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "npx eslint \"**/*.js\""
+    "lint": "npx eslint \"**/*.js\"",
+    "start": "node server.js"
   },
   "repository": {
     "type": "git",
@@ -29,5 +30,9 @@
     "ejs": "^3.1.8",
     "express": "^4.18.2",
     "path": "^0.12.7"
-  }
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "keywords": []
 }

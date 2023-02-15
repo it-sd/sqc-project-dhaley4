@@ -1,11 +1,28 @@
+require('dotenv').config() // Read environment variables from .env
 const express = require('express')
-const app = express()
+const path = require('path')
 const PORT = process.env.PORT || 5163
 
-app.listen(PORT, () => console.log(`Listening on ${PORT}`))
-app.get('/health', function (req, res) {
-  app.render('/health')
-})
-app.get('/', function (req, res) {
-  app.render('/')
-})
+express()
+  .use(express.static(path.join(__dirname, 'public')))
+  .use(express.json())
+  .use(express.urlencoded({ extended: true }))
+  .set('views', path.join(__dirname, 'views'))
+  .set('view engine', 'ejs')
+  
+  // Step 4
+  .get('/health', function (req, res) {
+    res.status(200).send('Healthy')
+  })
+
+  // Step 5
+  .get('/', function (req, res) {
+    res.render('pages/index')
+  })
+
+  // Step 6
+  .get('/about', function (req, res) {
+    res.render('pages/about')
+  })
+
+  .listen(PORT, () => console.log(`Listening on ${PORT}`))
