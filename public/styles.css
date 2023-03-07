@@ -24,8 +24,45 @@ body {
   padding: 0.2em;
 }
 
-.emphasize {
-  color: blue;
-  font-weight: bold;
+#codeInput {
+  width: 30%;
+  float: left;
+  border: 1px solid yellow;
+}
+
+#buttonGrid {
+  border: 1px solid red;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 4px;
+}
+
+#codeDisplay {
+  color: yellow;
+  text-align: center;
+  background-color: black;
+  width: 70%;
+  margin: 0 auto;
+  display: block;
+  margin-top: 0.5em;
+  padding: 0.1em;
+  font-family: 'SpaceType', sans-serif;
+  font-size: 1.2em;
+}
+
+
+.gridButton {
+  border: 1px solid blue;
+  background-color: #f5efae;
+  box-shadow: 1px 1px 2px black;
+}
+
+#phraseTextArea {
+  resize: none;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  width: 65%;
+  background-color: black;
 }
 
