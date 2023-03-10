@@ -35,9 +35,24 @@ body {
 #codeInput a {
   text-align: center;
   margin: 0 auto;
-  font-family: 'SpaceType', sans-serif;
-  font-size: 10em;
-  text-decoration: none;
-  padding: 2em;
-  color: yellow;
+  font-family: 'SpaceType', sans-serif;  
+  font-size: 1em;
+  user-select: none;
+}
+
+
+.gridButton {
+  border: 1px solid blue;
+  background-color: #f5efae;
+  box-shadow: 1px 1px 2px black;
+  text-align: center;
+  user-select: none;
+}
+
+#phraseTextArea {
+  resize: none;
+  margin-left: 1.5em;
+  margin-right: 0.5em;
+  width: 75%;
+  background-color: black;
 }
