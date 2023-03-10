@@ -12,14 +12,13 @@
         <div class="gridButton" id="button7" onclick=insertNumber(7)>7</div>
         <div class="gridButton" id="button8" onclick=insertNumber(8)>8</div>
         <div class="gridButton" id="button9" onclick=insertNumber(9)>9</div>
-        <div class="gridButton" id="buttonEnter" data-action="go">GO</div>
+        <div class="gridButton" id="buttonEnter" onclick=submitPasscode()>GO</div>
         <div class="gridButton" id="button0" onclick=insertNumber(0)>0</div>
         <div class="gridButton" id="buttonBack" onclick=backspace()>&leftarrow;</div>
       </div>
       <span id="codeDisplay">Awaiting Input...</span>
     </div>
     <div id="textArea">
-      
       <textarea name="phraseTextArea" id="phraseTextArea" cols="30" rows="10" readonly=false></textarea>
     </div>
   </div>

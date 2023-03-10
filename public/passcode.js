@@ -34,4 +34,11 @@ function submitPasscode() {
   // TODO: Implement this
   // Should check if the passcode is saved anywhere, and if it is, retrieve the associated message, and display it in the large textarea.
   // if there is no message saved for that passcode, prompt the user to submit their own to fill the space.
+  const codeDisplay = document.getElementById('codeDisplay')
+  let passcode = codeDisplay.innerText
+  let outputTextArea = document.getElementById('phraseTextArea')
+  if (passcode != 'Awaiting Input...') {
+    outputTextArea.textContent += passcode
+  }
+  // The above code is a placeholder.
 }
