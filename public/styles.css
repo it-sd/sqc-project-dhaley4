@@ -25,19 +25,24 @@ body {
 }
 
 #codeInput {
-  width: 65%;
+  width: 45%;
   margin: 3em auto;
   background-color: #000000;
-  border-radius: 20%;
-  box-shadow: 3px 10px 4px blue;
+  border-radius: 30em;
+  box-shadow: 0 0 20px blue;
+  padding: 1em;
+  text-align: center;
 }
 
 #codeInput a {
+  display: inline-block;
   text-align: center;
   margin: 0 auto;
   font-family: 'SpaceType', sans-serif;  
-  font-size: 1em;
+  font-size: 10em;
   user-select: none;
+  color: yellow;
+  text-decoration: none;
 }
 
 
