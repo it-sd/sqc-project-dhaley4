@@ -25,49 +25,19 @@ body {
 }
 
 #codeInput {
-  width: 15%;
-  float: left;
-  border: 1px solid yellow;
+  width: 65%;
+  margin: 3em auto;
+  background-color: #000000;
+  border-radius: 20%;
+  box-shadow: 3px 10px 4px blue;
 }
 
-#buttonGrid {
-  border: 1px solid red;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(4, 1fr);
-  gap: 4px;
-}
-
-#codeDisplay {
-  color: yellow;
+#codeInput a {
   text-align: center;
-  background-color: black;
-  width: 90%;
   margin: 0 auto;
-  display: block;
-  margin-top: 0.5em;
-  padding: 0.1em;
   font-family: 'SpaceType', sans-serif;
-  font-size: 1em;
-  user-select: none;
-}
-
-
-.gridButton {
-  border: 1px solid blue;
-  background-color: #f5efae;
-  box-shadow: 1px 1px 2px black;
-  text-align: center;
-  user-select: none;
-}
-
-#phraseTextArea {
+  font-size: 10em;
+  text-decoration: none;
+  padding: 2em;
   color: yellow;
-  font-family: 'SpaceType', sans-serif;
-  resize: none;
-  margin-left: 1.5em;
-  margin-right: 0.5em;
-  padding-bottom: 2.5em;
-  width: 75%;
-  background-color: black;
 }

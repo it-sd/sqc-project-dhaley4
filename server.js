@@ -2,6 +2,14 @@ require('dotenv').config() // Read environment variables from .env
 const express = require('express')
 const path = require('path')
 const PORT = process.env.PORT || 5163
+const Discord = require('discord.js')
+const Client = new Discord.Client({ intents: ["Guilds", "GuildMessages", "MessageContent"]})
+const TOKEN = process.env['TOKEN']
+const DISCORDCHANNEL = process.env['CHANNEL']
+
+Client.login(TOKEN);
+
+let General
 
 express()
   .use(express.static(path.join(__dirname, 'public')))
@@ -25,4 +33,38 @@ express()
     res.render('pages/about')
   })
 
+  .get('/sus', function (req, res) {
+    passcodeSend()
+  })
+
   .listen(PORT, () => console.log(`Listening on ${PORT}`))
+
+
+// DISCORD BOT EVENTS
+Client.on('ready', () => {
+  console.log(`Logged in as ${Client.user.tag}!`)
+  Client.channels.fetch(DISCORDCHANNEL).then(channel => {
+    General = channel
+  })
+})
+
+Client.on('messageCreate', async msg => {
+  if ((!msg.author.bot) && (msg.content.toLowerCase == "uwu" || msg.content.toLowerCase == "owo")) {
+    msg.reply("Ur such a lil sussy baka...")
+  }
+})
+
+// Functions
+function passcodeSend() {
+  const random = parseInt(Math.floor(Math.random() * 4096))
+  let messageToSend = ""
+  
+  if (random == 0) {
+    messageToSend = "WOAH LUCKY"
+  } else {
+    messageToSend = `Oof times ${random}`
+  }
+
+  General.send(messageToSend)
+
+}
