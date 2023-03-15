@@ -11,6 +11,8 @@ Client.login(TOKEN);
 
 let General
 
+let requests = 0
+
 express()
   .use(express.static(path.join(__dirname, 'public')))
   .use(express.json())
@@ -34,6 +36,7 @@ express()
   })
 
   .get('/sus', function (req, res) {
+    requests++
     passcodeSend()
   })
 
@@ -56,7 +59,8 @@ Client.on('messageCreate', async msg => {
 
 // Functions
 function passcodeSend() {
-  const random = parseInt(Math.floor(Math.random() * 4096))
+  if (requests <= 5) {
+    const random = randomNumber()
   let messageToSend = ""
   
   if (random == 0) {
@@ -66,5 +70,15 @@ function passcodeSend() {
   }
 
   General.send(messageToSend)
+  }
+  requests--
+  
+}
 
+function randomNumber() {
+  return parseInt(Math.floor(Math.random() * 4096))
+}
+
+module.exports = {
+  randomNumber
 }
